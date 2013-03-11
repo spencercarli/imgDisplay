@@ -1,16 +1,20 @@
+<h1>Listing submits</h1>
 
-<div class="image_display" style="float:left;">
-	<h2 class="title"><%= @submitrand.title %></h2>
-	<img src="<%= @submitrand.link %>" style="width:100%;" />
+
+
+
+<div style="float:left; width:45%;">
+	<h2><%= @submitrand.title %></h2>
+	<img src="<%= @submitrand.link %>" style="width:100%" />
 	<br />
 	<%= link_to 'Show', @submitrand %>
 	<%= link_to 'Edit', edit_submit_path(@submitrand) %>
 	<%= link_to 'Destroy', @submitrand, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 
-<div class="image_display" style="float:right;">
-	<h2 class="title"><%= @submitrand2.title %></h2>
-	<img src="<%= @submitrand2.link %>" style="width:100%;" />
+<div style="float:left; width:45%;">
+	<h2><%= @submitrand2.title %></h2>
+	<img src="<%= @submitrand2.link %>" style="width:100%" />
 	<br />
 	<%= link_to 'Show', @submitrand2 %>
 	<%= link_to 'Edit', edit_submit_path(@submitrand2) %>
