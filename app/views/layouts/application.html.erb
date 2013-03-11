@@ -10,13 +10,13 @@
 	<div class="navbar navbar-inverse">
 	  <div class="navbar-inner">
 		<%= link_to 'Image Compare', root_path, :class => "brand" %>
-	    <ul class="nav">
+	    <ul class="nav" style="float:right;">
 	      <li><%= link_to 'Submit', new_submit_path %></li>
 	    </ul>
 	  </div>
 	</div>
-
-<%= yield %>
-
+<div id="container">
+	<%= yield %>
+</div>
 </body>
 </html>
