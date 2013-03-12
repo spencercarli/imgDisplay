@@ -11,6 +11,7 @@ class SubmitsController < ApplicationController
         @submitrand2 = @submits.sample
       end
 
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @submits }
