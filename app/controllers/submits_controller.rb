@@ -7,9 +7,7 @@ class SubmitsController < ApplicationController
     @submitrand2 = @submits.sample
     
 
-      while @submitrand == @submitrand2
-        @submitrand2 = @submits.sample
-      end
+      
 
     respond_to do |format|
       format.html # index.html.erb
