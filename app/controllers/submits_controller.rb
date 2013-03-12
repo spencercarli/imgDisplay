@@ -5,9 +5,7 @@ class SubmitsController < ApplicationController
     @submits = Submit.all
     @submitrand = @submits.sample
     @submitrand2 = @submits.sample
-    
 
-      
 
     respond_to do |format|
       format.html # index.html.erb
