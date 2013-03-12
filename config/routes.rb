@@ -1,4 +1,6 @@
 ImgDisplay::Application.routes.draw do
+  resources :homepages
+
   resources :submits
 
   # The priority is based upon order of creation:
@@ -52,7 +54,7 @@ ImgDisplay::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   
-  root :to => 'submits#index'
+  root :to => 'homepages#index'
 
   # See how all your routes lay out with "rake routes"
 
