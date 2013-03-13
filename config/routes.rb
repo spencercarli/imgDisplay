@@ -1,7 +1,22 @@
 ImgDisplay::Application.routes.draw do
+  get "user_sessions/new"
+
+  get "user_sessions/create"
+
+  get "user_sessions/destroy"
+
+  resources :users
+
   resources :homepages
 
   resources :submits
+  
+  #root :to => 'users#index'
+  resources :user_sessions
+  resources :users
+
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

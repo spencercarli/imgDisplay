@@ -1,6 +1,7 @@
 class HomepagesController < ApplicationController
   # GET /homepages
   # GET /homepages.json
+  skip_before_filter :require_login
   def index
     @homepages = Submit.all.sample
 

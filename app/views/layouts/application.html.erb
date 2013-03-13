@@ -11,11 +11,22 @@
 	  <div class="navbar-inner">
 		<%= link_to 'Image Compare', root_path, :class => "brand" %>
 	    <ul class="nav" style="float:right;">
-	      <li><%= link_to 'Submit', new_submit_path %></li>
+		  <% if current_user %>
+				<li><%= link_to 'Submit', new_submit_path %></li>
+			    <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
+			    <li><%= link_to "Logout", :logout %></li>
+		  <% else %>
+			    <li><%= link_to "Register", new_user_path %></li>
+		  		<li><%= link_to "Login", :login %></li>
+		  <% end %>
 	    </ul>
 	  </div>
 	</div>
 <div id="container">
+	<div>
+	    <p id="notice"><%= notice %></p>
+	    <p id="alert"><%= alert %></p>
+	</div>
 	<%= yield %>
 </div>
 </body>
