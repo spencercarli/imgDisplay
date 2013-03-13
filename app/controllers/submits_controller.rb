@@ -2,7 +2,7 @@ class SubmitsController < ApplicationController
   # GET /submits
   # GET /submits.json
   
-  skip_before_filter :require_login, :only => [:index]
+  skip_before_filter :require_login, :only => [:index, :show]
   
   def index
     @submits = Submit.all
