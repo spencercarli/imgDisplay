@@ -4,7 +4,9 @@
 	
 <% else %>
 
-	<div class="display_image" style="float:left;">
+<div class="row">
+
+	<div class="display_image span6" >
 		<h2 class="title"><%= @submitrand.title %></h2>
 		<img src="<%= @submitrand.link %>" style="width:100%" />
 		<br />
@@ -14,7 +16,7 @@
 		<%= link_to 'Destroy', @submitrand, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 
-	<div class="display_image" style="float:right;">
+	<div class="display_image span6" style="float:right;">
 		<h2 class="title"><%= @submitrand2.title %></h2>
 		<img src="<%= @submitrand2.link %>" style="width:100%" />
 		<br />
@@ -22,8 +24,16 @@
 		<%= link_to 'Edit', edit_submit_path(@submitrand2) %>
 		<%= link_to 'Destroy', @submitrand2, method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
-
-	<br />
+</div>
+<br />
+	
+<div class="row">
+	<div class="span12">
+		<div style="margin-left:auto;margin-right:auto;width:80px">
+			<%= button_to "Next", submits_path, :method => "get", :class => "btn btn-primary btn-large"  %>
+		</div>
+	</div>
+</div>	
 	
 
 <% end %>
