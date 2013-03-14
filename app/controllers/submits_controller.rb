@@ -8,7 +8,6 @@ class SubmitsController < ApplicationController
     @submits = Submit.all
     @submitrand = @submits.sample
     @submitrand2 = @submits.sample
-    @user = User.find(params[:email])
     
     while @submitrand == @submitrand2
       @submitrand2 = @submits.sample
