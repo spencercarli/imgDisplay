@@ -8,6 +8,7 @@
 		<h2 class="title"><%= @submitrand.title %></h2>
 		<img src="<%= @submitrand.link %>" style="width:100%" />
 		<br />
+		<%= @user %>
 		<%= link_to 'Show', @submitrand %>
 		<%= link_to 'Edit', edit_submit_path(@submitrand) %>
 		<%= link_to 'Destroy', @submitrand, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -23,5 +24,7 @@
 	</div>
 
 	<br />
+	
+	<%= @user.email %>
 
 <% end %>

@@ -22,4 +22,5 @@ class UserSessionsController < ApplicationController
     logout
     redirect_to(:homepages, :notice => 'Logged out!')
   end
+  
 end

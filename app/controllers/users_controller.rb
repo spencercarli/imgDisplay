@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
+    @submit = Submits.link
 
     respond_to do |format|
       format.html # index.html.erb
