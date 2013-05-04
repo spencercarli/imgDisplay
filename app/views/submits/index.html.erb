@@ -3,26 +3,24 @@
 	<%= link_to 'new', new_submit_path %>
 	
 <% else %>
-
 <div class="row">
 
 	<div class="display_image span6" >
 		<h2 class="title"><%= @submitrand.title %></h2>
 		<img src="<%= @submitrand.link %>" style="width:100%" />
 		<br />
-		<%= @user %>
-		<%= link_to 'Show', @submitrand %>
-		<%= link_to 'Edit', edit_submit_path(@submitrand) %>
-		<%= link_to 'Destroy', @submitrand, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% if current_user %>
+			<%= link_to 'Show', @submitrand %>
+		<% end %>
 	</div>
 
 	<div class="display_image span6" style="float:right;">
 		<h2 class="title"><%= @submitrand2.title %></h2>
 		<img src="<%= @submitrand2.link %>" style="width:100%" />
 		<br />
-		<%= link_to 'Show', @submitrand2 %>
-		<%= link_to 'Edit', edit_submit_path(@submitrand2) %>
-		<%= link_to 'Destroy', @submitrand2, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% if current_user %>
+			<%= link_to 'Show', @submitrand2 %>
+		<% end %>
 	</div>
 </div>
 <br />

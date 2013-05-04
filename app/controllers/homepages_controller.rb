@@ -4,6 +4,7 @@ class HomepagesController < ApplicationController
   skip_before_filter :require_login
   def index
     @homepages = Submit.all.sample
+    #@user = User.find(params[:id])
 
     respond_to do |format|
       format.html # index.html.erb

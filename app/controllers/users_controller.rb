@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
-    @submit = Submits.link
 
     respond_to do |format|
       format.html # index.html.erb
@@ -39,6 +38,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    @images = Submit.all
   end
 
   # POST /users
