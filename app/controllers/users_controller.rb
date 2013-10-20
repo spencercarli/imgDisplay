@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-    @images = Submit.all
+    @images = @user.submits
   end
 
   # POST /users
@@ -61,6 +61,7 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
+    @images = @user.submits
 
     respond_to do |format|
       if @user.update_attributes(params[:user])

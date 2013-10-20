@@ -49,8 +49,10 @@ class SubmitsController < ApplicationController
   # POST /submits
   # POST /submits.json
   def create
+    #@user = User.find(params[:user_id])
     @submit = Submit.new(params[:submit])
-
+    #@submit = @user.submits.create(params[:submit])
+    
     respond_to do |format|
       if @submit.save
         format.html { redirect_to @submit, notice: 'Submit was successfully created.' }

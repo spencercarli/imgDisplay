@@ -1,5 +1,5 @@
 <div class="span5">
-<h1>Editing user</h1>
+<h1>Edit user</h1>
 
 <%= render 'form' %>
 
@@ -8,7 +8,8 @@
 <%= link_to 'Back', users_path %>
 </div>
 <div class="span6">
-
+	<h1>Edit images</h1>
+	<p><%= @images.length %></p>
 	<% @images.each do |image| %>
 		<div class="span3">
 			<img src="<%= image.link %>" width="200"/><br /><br />

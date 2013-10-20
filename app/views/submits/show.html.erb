@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
+<h1>
   <%= @submit.title %>
-</p>
-
-<p>
-  <b>Link:</b>
-  <%= @submit.link %>
-</p>
+</h1>
+  
+<img src="<%= @submit.link %>" />
+<br />
 
 
 <%= link_to 'Edit', edit_submit_path(@submit) %> |

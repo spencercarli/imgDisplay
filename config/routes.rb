@@ -5,7 +5,8 @@ ImgDisplay::Application.routes.draw do
 
   get "user_sessions/destroy"
 
-  resources :users
+  resources :users 
+    #resources :submits
 
   resources :homepages
 
